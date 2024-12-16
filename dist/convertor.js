@@ -81,6 +81,11 @@ class PrismaConvertor {
                 options.isArray = true;
             }
             let type = this.getPrimitiveMapTypeFromDMMF(dmmfField);
+            if (type === 'Prisma.JsonValue') {
+                options.type = (0, util_1.capitalizeFirst)('object');
+                decorator.params.push(options);
+                return decorator;
+            }
             if (type && type !== 'any') {
                 options.type = (0, util_1.capitalizeFirst)(type);
                 decorator.params.push(options);
