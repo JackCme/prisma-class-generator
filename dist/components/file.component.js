@@ -85,6 +85,7 @@ class FileComponent {
     }
     resolveImports() {
         const generator = generator_1.PrismaClassGenerator.getInstance();
+        this.registerImport('Prisma', generator.getClientImportPath());
         this.prismaClass.relationTypes.forEach((relationClassName) => {
             this.registerImport(`${relationClassName}`, FileComponent.TEMP_PREFIX + relationClassName);
         });

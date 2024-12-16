@@ -81,6 +81,8 @@ export class FileComponent implements Echoable {
 
 	resolveImports() {
 		const generator = PrismaClassGenerator.getInstance()
+		this.registerImport('Prisma', generator.getClientImportPath())
+
 		this.prismaClass.relationTypes.forEach((relationClassName) => {
 			this.registerImport(
 				`${relationClassName}`,

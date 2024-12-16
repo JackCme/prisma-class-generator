@@ -22,7 +22,7 @@ const primitiveMapType: Record<DefaultPrismaFieldType, string> = {
 	String: 'string',
 	DateTime: 'Date',
 	Boolean: 'boolean',
-	Json: 'object',
+	Json: 'Prisma.JsonValue',
 	BigInt: 'BigInt',
 	Float: 'number',
 	Decimal: 'number',

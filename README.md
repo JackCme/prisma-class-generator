@@ -1,5 +1,12 @@
 # Prisma Class Generator
 
+> 원본 레포지토리에 이슈가 있어서 수정된 버전 포크
+
+To build:
+```
+npx tsc -p .
+```
+
 ## **Prisma**
 
 > [Prisma](https://www.prisma.io/) is Database ORM Library for Node.js, Typescript.
